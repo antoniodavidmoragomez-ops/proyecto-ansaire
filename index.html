@@ -3,294 +3,349 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ansaire Obras y Proyectos SL — Empresa constructora en Mijas, Málaga. Obra nueva, reformas integrales y revestimientos para particulares y profesionales." />
-  <title>Ansaire Obras y Proyectos | Constructora en Mijas, Málaga</title>
+  <meta name="description" content="Ansaire Obras y Proyectos SL — Constructora premium en Mijas, Málaga. Obra nueva, reformas integrales y revestimientos." />
+  <title>Ansaire — Obras y Proyectos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#inicio" class="nav-logo">ANSAIRE <span style="color:var(--color-accent)">·</span></a>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#galeria">Proyectos</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#contacto" class="nav-cta">Presupuesto</a></li>
-        </ul>
-      </nav>
-      <button class="hamburger" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-brand">
+        <span class="brand-main">ANSAIRE</span>
+        <span class="brand-line"></span>
+        <span class="brand-sub">Obras &amp; Proyectos</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#galeria" class="nav-link">Proyectos</a></li>
+        <li><a href="#contacto" class="nav-link nav-cta">Presupuesto</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menú">
+        <span></span><span></span>
       </button>
     </div>
-  </header>
+  </nav>
 
   <!-- HERO -->
   <section class="hero" id="inicio">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=85" alt="" aria-hidden="true" />
+    </div>
+    <div class="hero-noise"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Mijas, Málaga · Desde 2018</p>
-      <h1>Construimos con precisión,<br>entregamos con calidad</h1>
-      <p>Obra nueva, reformas integrales y revestimientos para particulares y profesionales en la Costa del Sol.</p>
-      <div>
-        <a href="#contacto" class="btn btn-primary">Solicitar presupuesto</a>
-        <a href="#servicios" class="btn btn-outline">Ver servicios</a>
+      <div class="hero-tag reveal-fade" data-delay="0">
+        <span class="tag-dot"></span>Mijas, Málaga · Desde 2018
       </div>
-      <div class="hero-stats">
-        <div>
-          <div class="stat-number">+7</div>
-          <div class="stat-label">Años de experiencia</div>
-        </div>
-        <div>
-          <div class="stat-number">+100</div>
-          <div class="stat-label">Proyectos completados</div>
-        </div>
-        <div>
-          <div class="stat-number">100%</div>
-          <div class="stat-label">Llave en mano</div>
-        </div>
+      <h1 class="hero-title">
+        <span class="line reveal-up" data-delay="100">Construimos</span>
+        <span class="line reveal-up accent-line" data-delay="200">con precisión.</span>
+      </h1>
+      <p class="hero-desc reveal-fade" data-delay="350">Obra nueva, reformas integrales y revestimientos para particulares y profesionales en la Costa del Sol.</p>
+      <div class="hero-actions reveal-fade" data-delay="450">
+        <a href="#contacto" class="btn btn-gold">
+          <span>Solicitar presupuesto</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
       </div>
+    </div>
+    <div class="hero-stats reveal-fade" data-delay="550">
+      <div class="stat">
+        <span class="stat-num" data-target="7">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Años activos</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="100">0</span><span class="stat-plus">+</span>
+        <span class="stat-label">Proyectos</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <span class="stat-num" data-target="100">0</span><span class="stat-plus">%</span>
+        <span class="stat-label">Llave en mano</span>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
     </div>
   </section>
 
   <!-- SERVICIOS -->
   <section class="servicios" id="servicios">
-    <div class="section-header">
-      <span class="section-label">Nuestros servicios</span>
-      <h2>Todo lo que necesitas para tu proyecto</h2>
-      <p>Cubrimos todas las fases de la construcción con equipos propios y materiales de primera calidad.</p>
-    </div>
-    <div class="servicios-grid">
-
-      <div class="servicio-card">
-        <div class="servicio-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            <polyline points="9 22 9 12 15 12 15 22"/>
-          </svg>
-        </div>
-        <h3>Obra Nueva</h3>
-        <p>Ejecución completa de edificios residenciales desde cimentación hasta acabados finales, con gestión integral del proyecto.</p>
-        <ul>
-          <li>Edificios plurifamiliares y unifamiliares</li>
-          <li>Gestión de licencias y permisos</li>
-          <li>Coordinación con arquitectos</li>
-          <li>Control de calidad en cada fase</li>
-        </ul>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow reveal-fade">Nuestros servicios</span>
+        <h2 class="reveal-up">Todo lo que necesitas<br /><em>para tu proyecto</em></h2>
       </div>
+      <div class="servicios-grid">
 
-      <div class="servicio-card">
-        <div class="servicio-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-          </svg>
+        <div class="s-card reveal-up" data-delay="0">
+          <div class="s-card-num">01</div>
+          <div class="s-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3>Obra Nueva</h3>
+          <p>Ejecución completa de edificios residenciales desde cimentación hasta acabados, con gestión integral del proyecto.</p>
+          <ul>
+            <li>Edificios plurifamiliares y unifamiliares</li>
+            <li>Gestión de licencias y permisos</li>
+            <li>Coordinación con arquitectos</li>
+          </ul>
+          <div class="s-card-line"></div>
         </div>
-        <h3>Reformas Integrales</h3>
-        <p>Transformamos por completo viviendas y locales comerciales con total renovación de instalaciones, distribución y acabados.</p>
-        <ul>
-          <li>Reforma completa de viviendas</li>
-          <li>Distribución y tabiquería</li>
-          <li>Instalaciones eléctricas y de fontanería</li>
-          <li>Carpintería, pintura y acabados</li>
-        </ul>
-      </div>
 
-      <div class="servicio-card">
-        <div class="servicio-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="3" y="3" width="18" height="18" rx="2"/>
-            <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
-          </svg>
+        <div class="s-card reveal-up" data-delay="100">
+          <div class="s-card-num">02</div>
+          <div class="s-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
+          </div>
+          <h3>Reformas Integrales</h3>
+          <p>Transformamos viviendas y locales con renovación total de instalaciones, distribución y acabados de calidad.</p>
+          <ul>
+            <li>Reforma completa de viviendas</li>
+            <li>Instalaciones eléctricas y fontanería</li>
+            <li>Carpintería, pintura y acabados</li>
+          </ul>
+          <div class="s-card-line"></div>
         </div>
-        <h3>Revestimientos</h3>
-        <p>Colocación profesional de suelos, paredes y techos con materiales de alta gama para interiores y exteriores.</p>
-        <ul>
-          <li>Suelos cerámicos y porcelánicos</li>
-          <li>Revestimientos de paredes</li>
-          <li>Alicatados y azulejos</li>
-          <li>Tarima y pavimentos especiales</li>
-        </ul>
-      </div>
 
+        <div class="s-card reveal-up" data-delay="200">
+          <div class="s-card-num">03</div>
+          <div class="s-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <path d="M3 9h18M3 15h18M9 3v18M15 3v18"/>
+            </svg>
+          </div>
+          <h3>Revestimientos</h3>
+          <p>Colocación profesional de suelos, paredes y techos con materiales de alta gama para interior y exterior.</p>
+          <ul>
+            <li>Suelos cerámicos y porcelánicos</li>
+            <li>Alicatados y revestimientos</li>
+            <li>Tarima y pavimentos especiales</li>
+          </ul>
+          <div class="s-card-line"></div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- POR QUÉ NOSOTROS -->
-  <section class="porque" id="nosotros">
-    <div class="porque-inner">
-      <div class="porque-img">
-        <img
-          src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80"
-          alt="Equipo de Ansaire trabajando en obra"
-          loading="lazy"
-        />
+  <!-- NOSOTROS -->
+  <section class="nosotros" id="nosotros">
+    <div class="wrap nosotros-inner">
+      <div class="nosotros-img-wrap reveal-left">
+        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=85" alt="Equipo Ansaire en obra" loading="lazy" />
+        <div class="nosotros-badge">
+          <span class="badge-num">2018</span>
+          <span class="badge-txt">Fundación</span>
+        </div>
       </div>
-      <div class="porque-content">
-        <span class="section-label">Por qué elegirnos</span>
-        <h2>Compromiso con el resultado final</h2>
-        <p>Desde 2018 ejecutamos proyectos en toda la Costa del Sol con equipos propios, materiales certificados y plazos cumplidos.</p>
-        <ul class="feature-list">
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            <div><strong>Empresa certificada</strong> — CNAE 4121 Construcción de edificios residenciales y CNAE 4333 Revestimientos</div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            <div><strong>Proyectos llave en mano</strong> — Gestionamos todas las fases sin que tengas que coordinar a múltiples empresas</div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            <div><strong>Presupuesto sin compromiso</strong> — Detallamos cada partida antes de comenzar, sin sorpresas al final</div>
-          </li>
-          <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="20 6 9 17 4 12"/>
-            </svg>
-            <div><strong>Atención directa</strong> — Trabajas siempre con el responsable del proyecto, no con intermediarios</div>
-          </li>
-        </ul>
+      <div class="nosotros-content">
+        <span class="eyebrow reveal-fade">Por qué elegirnos</span>
+        <h2 class="reveal-up">Compromiso con<br /><em>el resultado final</em></h2>
+        <p class="reveal-fade">Desde 2018 ejecutamos proyectos en toda la Costa del Sol con equipos propios, materiales certificados y plazos cumplidos. Sin intermediarios, sin sorpresas.</p>
+        <div class="features">
+          <div class="feature reveal-up" data-delay="0">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong>Empresa certificada</strong>
+              <span>CNAE 4121 y CNAE 4333 — Construcción y Revestimientos</span>
+            </div>
+          </div>
+          <div class="feature reveal-up" data-delay="80">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong>Llave en mano</strong>
+              <span>Gestionamos todas las fases sin múltiples empresas</span>
+            </div>
+          </div>
+          <div class="feature reveal-up" data-delay="160">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong>Presupuesto detallado</strong>
+              <span>Cada partida clara antes de empezar, sin sorpresas</span>
+            </div>
+          </div>
+          <div class="feature reveal-up" data-delay="240">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <strong>Atención directa</strong>
+              <span>Siempre con el responsable del proyecto, no intermediarios</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- GALERÍA -->
   <section class="galeria" id="galeria">
-    <div class="section-header">
-      <span class="section-label">Proyectos realizados</span>
-      <h2>Nuestro trabajo habla por sí solo</h2>
-      <p>Selección de obras y reformas ejecutadas en Mijas y alrededores.</p>
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow reveal-fade">Proyectos realizados</span>
+        <h2 class="reveal-up">Nuestro trabajo<br /><em>habla por sí solo</em></h2>
+      </div>
     </div>
-    <div class="galeria-grid" style="max-width:1200px;margin:0 auto;">
-      <div class="galeria-item">
-        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80" alt="Edificio residencial obra nueva" loading="lazy" />
-        <div class="galeria-overlay"><span>Obra Nueva</span></div>
+    <div class="galeria-grid">
+      <div class="g-item reveal-scale" data-delay="0">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Obra nueva residencial" loading="lazy" />
+        <div class="g-label"><span>Obra Nueva</span><span class="g-loc">Mijas, 2024</span></div>
       </div>
-      <div class="galeria-item">
+      <div class="g-item reveal-scale" data-delay="80">
         <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=700&q=80" alt="Cocina reformada" loading="lazy" />
-        <div class="galeria-overlay"><span>Reforma integral</span></div>
+        <div class="g-label"><span>Reforma Integral</span><span class="g-loc">Fuengirola, 2023</span></div>
       </div>
-      <div class="galeria-item">
+      <div class="g-item reveal-scale" data-delay="160">
         <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=700&q=80" alt="Salón reformado" loading="lazy" />
-        <div class="galeria-overlay"><span>Reforma integral</span></div>
+        <div class="g-label"><span>Reforma Integral</span><span class="g-loc">Marbella, 2023</span></div>
       </div>
-      <div class="galeria-item">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Revestimiento de suelos" loading="lazy" />
-        <div class="galeria-overlay"><span>Revestimiento</span></div>
+      <div class="g-item reveal-scale" data-delay="0">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Revestimiento suelos" loading="lazy" />
+        <div class="g-label"><span>Revestimiento</span><span class="g-loc">Benalmádena, 2024</span></div>
       </div>
-      <div class="galeria-item">
+      <div class="g-item reveal-scale" data-delay="80">
         <img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?w=700&q=80" alt="Baño reformado" loading="lazy" />
-        <div class="galeria-overlay"><span>Reforma baño</span></div>
+        <div class="g-label"><span>Reforma Baño</span><span class="g-loc">Mijas, 2024</span></div>
+      </div>
+      <div class="g-item reveal-scale" data-delay="160">
+        <img src="https://images.unsplash.com/photo-1560185007-cde436f6a4d0?w=700&q=80" alt="Interior reformado" loading="lazy" />
+        <div class="g-label"><span>Reforma Interior</span><span class="g-loc">Torremolinos, 2023</span></div>
       </div>
     </div>
   </section>
 
   <!-- CONTACTO -->
   <section class="contacto" id="contacto">
-    <div class="section-header">
-      <span class="section-label">Contacto</span>
-      <h2>¿Tienes un proyecto en mente?</h2>
-      <p>Cuéntanos qué necesitas y te enviamos presupuesto sin compromiso en menos de 48 horas.</p>
-    </div>
-    <div class="contacto-inner">
-      <div class="contacto-info">
-        <h3>Estamos en Mijas</h3>
-        <p>Atendemos proyectos en toda la Costa del Sol y provincia de Málaga.</p>
+    <div class="wrap contacto-inner">
+      <div class="contacto-left">
+        <span class="eyebrow reveal-fade">Contacto</span>
+        <h2 class="reveal-up">¿Tienes un<br /><em>proyecto en mente?</em></h2>
+        <p class="reveal-fade">Cuéntanos qué necesitas. Presupuesto sin compromiso en menos de 48 horas.</p>
 
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1.26h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6.13 6.13l.96-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-          </svg>
-          <div>
-            <span>Teléfonos</span>
-            <p>
-              <a href="tel:651089140">651 089 140</a> ·
-              <a href="tel:629226103">629 226 103</a> ·
-              <a href="tel:667669027">667 669 027</a>
-            </p>
+        <div class="contact-items">
+          <a href="tel:651089140" class="c-item reveal-up" data-delay="0">
+            <div class="c-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1.26h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6.13 6.13l.96-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <span>Llamar ahora</span>
+              <strong>651 089 140</strong>
+            </div>
+          </a>
+          <a href="tel:629226103" class="c-item reveal-up" data-delay="80">
+            <div class="c-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.48 2 2 0 0 1 3.58 1.26h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6.13 6.13l.96-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <span>Alternativo</span>
+              <strong>629 226 103</strong>
+            </div>
+          </a>
+          <div class="c-item reveal-up" data-delay="160">
+            <div class="c-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <span>Dirección</span>
+              <strong>C/ Biznaga Nº9 4ºD, Mijas</strong>
+            </div>
           </div>
-        </div>
-
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-          <div>
-            <span>Dirección</span>
-            <p>Calle Biznaga Nº 9 4º D<br>29651 Mijas, Málaga</p>
-          </div>
-        </div>
-
-        <div class="info-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-          </svg>
-          <div>
-            <span>Instagram</span>
-            <p><a href="https://www.instagram.com/ansaireobrasyproyectos_" target="_blank" rel="noopener">@ansaireobrasyproyectos_</a></p>
-          </div>
+          <a href="https://www.instagram.com/ansaireobrasyproyectos_" target="_blank" rel="noopener" class="c-item reveal-up" data-delay="240">
+            <div class="c-item-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </div>
+            <div>
+              <span>Instagram</span>
+              <strong>@ansaireobrasyproyectos_</strong>
+            </div>
+          </a>
         </div>
       </div>
 
-      <div class="contacto-form">
-        <h3>Solicitar presupuesto</h3>
-        <form id="contactForm" novalidate>
+      <div class="contacto-form-wrap reveal-right">
+        <form class="contacto-form" id="contactForm" novalidate>
           <div class="form-row">
-            <div class="form-group">
+            <div class="form-field">
+              <input type="text" id="nombre" name="nombre" placeholder=" " required />
               <label for="nombre">Nombre *</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
             </div>
-            <div class="form-group">
+            <div class="form-field">
+              <input type="tel" id="telefono" name="telefono" placeholder=" " required />
               <label for="telefono">Teléfono *</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="612 345 678" required />
             </div>
           </div>
-          <div class="form-group">
+          <div class="form-field">
+            <input type="email" id="email" name="email" placeholder=" " />
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" />
           </div>
-          <div class="form-group">
-            <label for="servicio">Tipo de servicio</label>
-            <select id="servicio" name="servicio">
+          <div class="form-field form-select-wrap">
+            <select id="servicio" name="servicio" required>
+              <option value="" disabled selected hidden></option>
               <option value="Obra nueva">Obra nueva</option>
               <option value="Reforma integral">Reforma integral</option>
               <option value="Revestimientos">Revestimientos</option>
               <option value="Otro">Otro / No sé aún</option>
             </select>
+            <label for="servicio">Tipo de servicio</label>
           </div>
-          <div class="form-group">
+          <div class="form-field">
+            <textarea id="mensaje" name="mensaje" placeholder=" " required></textarea>
             <label for="mensaje">Cuéntanos tu proyecto *</label>
-            <textarea id="mensaje" name="mensaje" placeholder="Describe brevemente el proyecto: ubicación, superficie aproximada, qué necesitas..." required></textarea>
           </div>
-          <button type="submit" class="btn-submit">Enviar solicitud →</button>
+          <button type="submit" class="btn btn-gold btn-full">
+            <span>Enviar solicitud</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
         </form>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-logo">
-        ANSAIRE OBRAS Y PROYECTOS SL
-        <span>CIF: — · Mijas, Málaga</span>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <span class="brand-main">ANSAIRE</span>
+        <span class="footer-tagline">Obras y Proyectos SL · Mijas, Málaga</span>
       </div>
-      <ul class="footer-links">
-        <li><a href="#servicios">Servicios</a></li>
-        <li><a href="#galeria">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
-        <li><a href="https://www.instagram.com/ansaireobrasyproyectos_" target="_blank" rel="noopener">Instagram</a></li>
-      </ul>
+      <nav class="footer-nav">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+        <a href="https://www.instagram.com/ansaireobrasyproyectos_" target="_blank" rel="noopener">Instagram</a>
+      </nav>
       <p class="footer-copy">© <span id="year"></span> Ansaire Obras y Proyectos SL</p>
     </div>
   </footer>
