@@ -12,6 +12,22 @@
 </head>
 <body>
 
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-shutter shutter-top"></div>
+    <div class="preloader-shutter shutter-bottom"></div>
+    <div class="preloader-inner">
+      <span class="preloader-brand">ANSAIRE</span>
+      <span class="preloader-sub">Obras &amp; Proyectos</span>
+    </div>
+    <span class="preloader-count" id="preloaderCount">0</span>
+  </div>
+
+  <!-- CAPAS CINEMATOGRÁFICAS -->
+  <div class="film-grain" aria-hidden="true"></div>
+  <div class="film-vignette" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <div class="cursor" id="cursor"></div>
   <div class="cursor-dot" id="cursorDot"></div>
 
@@ -39,8 +55,13 @@
   <section class="hero" id="inicio">
     <div class="hero-bg">
       <img src="assets/hero.png" alt="" aria-hidden="true" />
+      <video id="heroVideo" muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="assets/hero-video.mp4" type="video/mp4" />
+      </video>
     </div>
     <div class="hero-noise"></div>
+    <div class="letterbox letterbox-top" aria-hidden="true"></div>
+    <div class="letterbox letterbox-bottom" aria-hidden="true"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-tag reveal-fade" data-delay="0">
@@ -83,6 +104,7 @@
 
   <!-- SERVICIOS -->
   <section class="servicios" id="servicios">
+    <div class="sec-marker" aria-hidden="true"><span>01</span><i></i><em>Servicios</em></div>
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow reveal-fade">Nuestros servicios</span>
@@ -148,9 +170,12 @@
 
   <!-- NOSOTROS -->
   <section class="nosotros" id="nosotros">
+    <div class="sec-marker" aria-hidden="true"><span>02</span><i></i><em>Nosotros</em></div>
     <div class="wrap nosotros-inner">
       <div class="nosotros-img-wrap reveal-left">
-        <img src="assets/nosotros.png" alt="Obra Ansaire en ejecución" loading="lazy" />
+        <div class="parallax-frame">
+          <img src="assets/nosotros.png" alt="Obra Ansaire en ejecución" loading="lazy" data-parallax="0.06" />
+        </div>
         <div class="nosotros-badge">
           <span class="badge-num">2018</span>
           <span class="badge-txt">Fundación</span>
@@ -204,6 +229,7 @@
 
   <!-- GALERÍA -->
   <section class="galeria" id="galeria">
+    <div class="sec-marker" aria-hidden="true"><span>03</span><i></i><em>Proyectos</em></div>
     <div class="wrap">
       <div class="section-head">
         <span class="eyebrow reveal-fade">Proyectos realizados</span>
@@ -232,6 +258,7 @@
 
   <!-- CONTACTO -->
   <section class="contacto" id="contacto">
+    <div class="sec-marker" aria-hidden="true"><span>04</span><i></i><em>Contacto</em></div>
     <div class="wrap contacto-inner">
       <div class="contacto-left">
         <span class="eyebrow reveal-fade">Contacto</span>
